@@ -1,0 +1,8 @@
+1445864519231	Rename type 'Moves'
+1445864596449	Rename type 'Operations'
+1445868797724	Extract method 'move'
+1445869377150	Rename method 'makeMoves'
+1445869386891	Rename method 'move'
+1445871919323	Rename local variable 'k'
+1445871925831	Rename local variable 'i'
+1445949232825	Rename type 'MadDragon'

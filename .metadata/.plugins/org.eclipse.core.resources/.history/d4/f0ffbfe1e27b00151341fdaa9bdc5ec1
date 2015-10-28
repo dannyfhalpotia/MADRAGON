@@ -1,0 +1,19 @@
+
+
+public class Path {
+	
+	private ArrayList<Move> moves;
+	
+	public Path(int maxSteps){
+		moves = new ArrayList<Move>();	
+	}
+	
+	
+	public Move[] getPath(){
+		return moves;
+	}
+	
+	public void addMove(Move move, int stepCount) {
+		moves[stepCount] = move;
+	}
+}

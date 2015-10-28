@@ -1,0 +1,21 @@
+/**
+ * Directions
+ */
+public enum Direction {
+
+	LEFT("left"), 
+	RIGHT("right"), 
+	UP("up"), 
+	DOWN("down");
+	
+private final String direction;
+	
+	private Direction(final String operation){
+		this.operation = operation;
+	}
+	
+	@Override
+	public String toString() {
+		return this.operation;
+	}
+}

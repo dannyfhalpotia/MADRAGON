@@ -1,0 +1,12 @@
+
+public class Move {
+
+	private Operation operation;
+	private int id;
+	private int positions;
+	private Direction direction;
+	
+	public Move(Operation op, int id, int positions, Direction direction) {
+		
+	}
+}

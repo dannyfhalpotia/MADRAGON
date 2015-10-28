@@ -1,0 +1,9 @@
+
+public enum Operation {
+	
+
+	ROW_OPERATION("Row"), 
+	COLUMN_OPERATION("Column");
+	
+	private final Operation operation;
+}

@@ -1,0 +1,88 @@
+import java.io.BufferedReader;
+import java.io.FileNotFoundException;
+import java.io.FileReader;
+import java.io.IOException;
+import java.util.ArrayList;
+
+
+public class Main {
+	
+	private int rows;
+	private int columns;
+	private int steps;
+
+	public static void main(String[] args) throws IOException
+	{
+		try{
+			
+			
+			Board startBoard = createBoard(startBoardString);
+			Board endBoard = createBoard(endBoardString);
+			
+			MadDragon madDragon = new MadDragon(startBoard, endBoard);
+			
+		} catch(IOException e) {
+			return;
+		}
+		
+	}
+	
+	private static Board createBoard(String[] boardString) {
+//		int n = Integer.parseInt(boardString[0]);
+//		int m = Integer.parseInt(boardString[1]);
+//		int k = Integer.parseInt(boardString[2]);
+//		
+//		char[][] charArray = new char[n][m];
+//		for(int o = 3; o<boardString.length; o++) {
+//			for(int p=0; p<boardString[o].length(); p++){
+//				charArray[o][p] = boardString[o].charAt(p);
+//			}
+//		}
+		
+		
+		
+		//two boards in a file??
+		
+		return new Board()
+	}
+	
+	public static Board[] readFile(String fileName) throws IOException {
+		int n,m,k;
+		
+		BufferedReader br = new BufferedReader(new FileReader(fileName));
+		
+		try {
+			
+			
+			n = Integer.parseInt(br.readLine());
+			m = Integer.parseInt(br.readLine());
+			k = Integer.parseInt(br.readLine());
+			
+			char[][] board1 = new char[n][m];
+			char[][] board2 = new char[n][m];
+			
+			int charsInBoard = 2 * n;
+			for(int i=0; i< charsInBoard; i++) {
+				char[] line = br.readLine().toCharArray();
+				if(line != null) {
+					if(i <= charsInBoard/2)
+					{
+						board1.append(line);
+					}
+					else {
+						board2.append(line);
+					}	
+				}
+				else {
+					break;
+				}
+			}
+			
+		} finally {
+			br.close();
+		}
+		
+		Board[] boards = new Board[2];
+		boards[0] = new Board()
+	}
+}

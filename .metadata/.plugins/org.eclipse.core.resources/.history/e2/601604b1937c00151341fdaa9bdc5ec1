@@ -1,0 +1,12 @@
+
+public enum Operation {
+	
+
+	ROW_OPERATION("Row"), 
+	COLUMN_OPERATION("Column");
+	
+	private final Operation operation;
+	private Operation(final Operation operation){
+		this.operation = operation;
+	}
+}

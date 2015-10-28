@@ -1,0 +1,15 @@
+
+
+public class Path {
+	
+	private Move[] moves;
+	
+	public Path(int maxSteps){
+		moves = new Move[maxSteps];	
+	}
+	
+	
+	public Move[] getPath(){
+		return moves;
+	}
+}

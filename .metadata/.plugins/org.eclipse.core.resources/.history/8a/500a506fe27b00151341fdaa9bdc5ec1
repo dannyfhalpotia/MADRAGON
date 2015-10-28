@@ -1,0 +1,8 @@
+
+public class Path {
+	
+	private Move[] moves;
+	public Path(Move move){
+		
+	}
+}

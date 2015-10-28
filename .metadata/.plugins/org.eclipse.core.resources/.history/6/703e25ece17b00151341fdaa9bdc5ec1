@@ -1,0 +1,5 @@
+
+public enum Operations {
+
+	ROW_OPERATION, COLUMN_OPERATION
+}

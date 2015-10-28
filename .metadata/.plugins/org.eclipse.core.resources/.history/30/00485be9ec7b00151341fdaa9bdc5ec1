@@ -1,0 +1,70 @@
+import java.util.Hashtable;
+
+
+public class MadDragon {
+	
+	private Hashtable<Board, Integer> attempts;
+	private Board endBoard;
+	private int maxSteps;
+	private boolean finished;
+	private Path path;
+	
+	public MadDragon(Board start, Board end, int maxSteps) {
+		this.attempts = new Hashtable<Board, Integer>();
+		this.endBoard = end;
+		this.maxSteps = maxSteps;
+	}
+	
+	public Path search(Board board) {
+		int depth = 0;
+		while(depth < this.maxSteps || this.finished) {
+			makeMoves(board, path, depth);
+			depth++;
+		}
+		
+		return this.path;
+	}
+	
+	public void makeMoves(Board initialBoard, Path path, int maxDepth) {
+		if(check(initialBoard, path, maxDepth)) {
+			this.finished = true;
+			this.path = path;
+			return;
+		}		
+		
+		move(path, maxDepth);
+		
+	}
+
+	private void move(Board initialBoard, Move move, Path path, int maxDepth) {
+	
+		Board board;
+		switch(move.getOperation()){
+		case ROW_OPERATION:
+			board = initialBoard.moveRow(move.getId(), move.getPositions(), move.getDirection());
+		default:
+			Board 
+		}
+		
+		if(attempts.containsKey(board)) {
+			if(attempts.get(board) > path.length) {
+				attempts.put(board, path.length);
+				makeMoves(board, path, maxDepth);
+				
+			}
+		} else {
+			attempts.put(board, path.length);
+			makeMoves(board, path, maxDepth);
+		}
+	}
+	
+	public boolean check(Board board, Path path, int maxDepth) {
+		
+		if(this.endBoard.equals(board)) {
+			return true;
+		}
+		
+		return (this.finished || path.length >= maxDepth);
+	}	
+	
+}
